@@ -12,10 +12,10 @@ function SignUpForm({ setToken }) {
             //API_URL = "https://fsa-jwt-practice.herokuapp.com/signup";
             const response = await fetch("https://fsa-jwt-practice.herokuapp.com/signup", {
                 method: "POST",
-                // headers: {
-                //     'Content-Type': 'application/json',
-                // },
-                body: JSON.stringify({username, password}),
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password })
                 //credentials: 'include',
             });
             const result = await response.json();

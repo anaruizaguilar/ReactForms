@@ -1,5 +1,6 @@
 import { useState } from "react";
 
+
 function Authenticate({ token }) {
 
     const [error, setError] = useState(null);
@@ -9,7 +10,7 @@ function Authenticate({ token }) {
         //e.preventDefault();
         //console.log("click");
         try{
-            const response = await fetch("https://fsa-jwt-practice.herokuapp.com/signup", {
+            const response = await fetch("https://fsa-jwt-practice.herokuapp.com/authenticate", {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
