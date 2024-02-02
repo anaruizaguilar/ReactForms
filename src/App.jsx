@@ -1,4 +1,5 @@
-
+import SignUpForm from './components/SignUpForm'
+import Authenticate from './components/Authenticate'
 import './App.css'
 
 function App() {
@@ -6,6 +7,8 @@ function App() {
 
   return (
     <>
+    <SignUpForm />
+    <Authenticate />
     </>
   )
 }
