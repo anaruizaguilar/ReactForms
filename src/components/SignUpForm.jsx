@@ -8,6 +8,11 @@ function SignUpForm({ setToken }) {
 
     async function handleSubmit(e) {
         e.preventDefault();
+
+        if(password.length < 7) {
+            setError("Password must be 7 characters")
+        }
+
         try {
             //API_URL = "https://fsa-jwt-practice.herokuapp.com/signup";
             const response = await fetch("https://fsa-jwt-practice.herokuapp.com/signup", {
@@ -24,6 +29,9 @@ function SignUpForm({ setToken }) {
         } catch (error) {
             console.error(setError);
         }
+
+        setUsername("");
+        setPassword("");
     }
 
     return(
